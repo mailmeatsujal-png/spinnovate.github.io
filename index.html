@@ -857,7 +857,7 @@
             transform: translateY(0);
         }
         
-        /* ===== ANIMATED PROCESS STYLES (FROM CENTRI CODE) ===== */
+        /* ===== ANIMATED PROCESS STYLES ===== */
         .step-container-enhanced {
             min-height: 80vh;
             padding: 4rem 2rem;
@@ -899,7 +899,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 1rem;
-            animation: none; /* Disabling numberPulse from centri code to match the base code style */
+            animation: none;
         }
         .step-content-enhanced .step-text .step-title {
             font-size: 2.5rem;
@@ -1190,20 +1190,16 @@
             .step-content-enhanced .step-visual {
                 height: 300px;
             }
-            .magnetic-device {
-                width: 280px;
-                height: 200px;
-            }
-            .thread-system {
-                width: 320px;
-                height: 200px;
+            .magnetic-device, .thread-system {
+                max-width: 90%;
             }
             .nav-menu {
                 display: none;
             }
             .problem-grid,
             .tech-showcase,
-            .contact-container {
+            .contact-container,
+            .solution-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -1215,20 +1211,23 @@
                 grid-template-columns: 1fr;
             }
             .process-timeline::before {
-                left: 2rem;
+                display: none;
             }
-            .process-step,
+            .process-step {
+                flex-direction: column;
+                justify-content: center;
+            }
             .process-step:nth-child(even) {
-                flex-direction: row;
+                flex-direction: column;
             }
             .step-content {
-                margin-left: 4rem;
-                margin-right: 0;
+                margin: 0;
             }
             .step-number {
                 width: 60px;
                 height: 60px;
                 font-size: 1.25rem;
+                margin-bottom: 1rem;
             }
             .hero-actions {
                 flex-direction: column;
@@ -1633,25 +1632,24 @@
                     </form>
                 </div>
                 
-<div class="contact-info fade-in">
-    <h3>Get in Touch</h3>
-    <p>We're excited to collaborate on the future of healthcare diagnostics.</p>
-    <div class="contact-methods">
-        <div class="contact-method">
-            <h4>Research Collaboration</h4>
-            <p>spinnovate.connect@gmail.com</p>
-        </div>
-        <div class="contact-method">
-            <h4>General Inquiries</h4>
-            <p>info@spinnovate.com</p>
-        </div>
-        <div class="contact-method">
-            <h4>Phone Number</h4>
-            <p>+91 9999999999</p>
-        </div>
-    </div>
-</div>
-
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <p>We're excited to collaborate on the future of healthcare diagnostics.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>Research Collaboration</h4>
+                            <p>spinnovate.connect@gmail.com</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>General Inquiries</h4>
+                            <p>info@spinnovate.com</p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>Phone Number</h4>
+                            <p>+91 9999999999</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
